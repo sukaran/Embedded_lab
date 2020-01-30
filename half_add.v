@@ -1,8 +1,8 @@
 module half_add(S,C,x,y);
 output S,C;
 input x,y;
-assign S = (x+y)*(~x + ~y);
-assign C = x*y;
+assign S = (x|y)&(~x | ~y);
+assign C = x&y;
 endmodule
 
 module simand;
