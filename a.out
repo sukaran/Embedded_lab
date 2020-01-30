@@ -6,129 +6,60 @@
 :vpi_module "vhdl_sys";
 :vpi_module "v2005_math";
 :vpi_module "va_math";
-S_0x5603734ef1a0 .scope module, "simand" "simand" 2 8;
+S_0x5556144ada60 .scope module, "simand" "simand" 2 8;
  .timescale 0 0;
-v0x560373514040_0 .net "C", 0 0, L_0x560373515760;  1 drivers
-v0x560373514100_0 .net "S", 0 0, L_0x560373515330;  1 drivers
-v0x5603735141d0_0 .var "x", 0 0;
-v0x5603735142d0_0 .var "y", 0 0;
-v0x5603735143a0_0 .var "z", 0 0;
-S_0x5603734e64f0 .scope module, "h" "half_add" 2 12, 2 1 0, S_0x5603734ef1a0;
+v0x5556144cf400_0 .net "B", 0 0, L_0x5556144cfce0;  1 drivers
+v0x5556144cf4c0_0 .net "D", 0 0, L_0x5556144cfa40;  1 drivers
+v0x5556144cf590_0 .var "x", 0 0;
+v0x5556144cf690_0 .var "y", 0 0;
+S_0x5556144a97b0 .scope module, "h" "half_subt" 2 12, 2 1 0, S_0x5556144ada60;
  .timescale 0 0;
-    .port_info 0 /OUTPUT 1 "S"
-    .port_info 1 /OUTPUT 1 "C"
+    .port_info 0 /OUTPUT 1 "D"
+    .port_info 1 /OUTPUT 1 "B"
     .port_info 2 /INPUT 1 "x"
     .port_info 3 /INPUT 1 "y"
-    .port_info 4 /INPUT 1 "z"
-L_0x560373514440 .functor NOT 1, v0x5603735141d0_0, C4<0>, C4<0>, C4<0>;
-L_0x560373514530 .functor NOT 1, v0x5603735142d0_0, C4<0>, C4<0>, C4<0>;
-L_0x5603735145f0 .functor AND 1, L_0x560373514440, L_0x560373514530, C4<1>, C4<1>;
-L_0x560373514700 .functor AND 1, L_0x5603735145f0, v0x5603735143a0_0, C4<1>, C4<1>;
-L_0x560373514810 .functor NOT 1, v0x5603735141d0_0, C4<0>, C4<0>, C4<0>;
-L_0x560373514880 .functor AND 1, L_0x560373514810, v0x5603735142d0_0, C4<1>, C4<1>;
-L_0x560373514980 .functor NOT 1, v0x5603735143a0_0, C4<0>, C4<0>, C4<0>;
-L_0x5603735149f0 .functor AND 1, L_0x560373514880, L_0x560373514980, C4<1>, C4<1>;
-L_0x560373514b50 .functor OR 1, L_0x560373514700, L_0x5603735149f0, C4<0>, C4<0>;
-L_0x560373514c60 .functor NOT 1, v0x5603735142d0_0, C4<0>, C4<0>, C4<0>;
-L_0x560373514dc0 .functor AND 1, v0x5603735141d0_0, L_0x560373514c60, C4<1>, C4<1>;
-L_0x560373514ec0 .functor NOT 1, v0x5603735143a0_0, C4<0>, C4<0>, C4<0>;
-L_0x560373515030 .functor AND 1, L_0x560373514dc0, L_0x560373514ec0, C4<1>, C4<1>;
-L_0x5603735150a0 .functor OR 1, L_0x560373514b50, L_0x560373515030, C4<0>, C4<0>;
-L_0x560373514fc0 .functor AND 1, v0x5603735141d0_0, v0x5603735142d0_0, C4<1>, C4<1>;
-L_0x5603735151e0 .functor AND 1, L_0x560373514fc0, v0x5603735143a0_0, C4<1>, C4<1>;
-L_0x560373515330 .functor OR 1, L_0x5603735150a0, L_0x5603735151e0, C4<0>, C4<0>;
-L_0x560373515490 .functor AND 1, v0x5603735141d0_0, v0x5603735142d0_0, C4<1>, C4<1>;
-L_0x5603735152a0 .functor AND 1, v0x5603735142d0_0, v0x5603735143a0_0, C4<1>, C4<1>;
-L_0x5603735155a0 .functor OR 1, L_0x560373515490, L_0x5603735152a0, C4<0>, C4<0>;
-L_0x560373515500 .functor AND 1, v0x5603735143a0_0, v0x5603735141d0_0, C4<1>, C4<1>;
-L_0x560373515760 .functor OR 1, L_0x5603735155a0, L_0x560373515500, C4<0>, C4<0>;
-v0x5603734e66c0_0 .net "C", 0 0, L_0x560373515760;  alias, 1 drivers
-v0x5603735129a0_0 .net "S", 0 0, L_0x560373515330;  alias, 1 drivers
-v0x560373512a60_0 .net *"_s0", 0 0, L_0x560373514440;  1 drivers
-v0x560373512b50_0 .net *"_s10", 0 0, L_0x560373514880;  1 drivers
-v0x560373512c30_0 .net *"_s12", 0 0, L_0x560373514980;  1 drivers
-v0x560373512d60_0 .net *"_s14", 0 0, L_0x5603735149f0;  1 drivers
-v0x560373512e40_0 .net *"_s16", 0 0, L_0x560373514b50;  1 drivers
-v0x560373512f20_0 .net *"_s18", 0 0, L_0x560373514c60;  1 drivers
-v0x560373513000_0 .net *"_s2", 0 0, L_0x560373514530;  1 drivers
-v0x560373513170_0 .net *"_s20", 0 0, L_0x560373514dc0;  1 drivers
-v0x560373513250_0 .net *"_s22", 0 0, L_0x560373514ec0;  1 drivers
-v0x560373513330_0 .net *"_s24", 0 0, L_0x560373515030;  1 drivers
-v0x560373513410_0 .net *"_s26", 0 0, L_0x5603735150a0;  1 drivers
-v0x5603735134f0_0 .net *"_s28", 0 0, L_0x560373514fc0;  1 drivers
-v0x5603735135d0_0 .net *"_s30", 0 0, L_0x5603735151e0;  1 drivers
-v0x5603735136b0_0 .net *"_s34", 0 0, L_0x560373515490;  1 drivers
-v0x560373513790_0 .net *"_s36", 0 0, L_0x5603735152a0;  1 drivers
-v0x560373513940_0 .net *"_s38", 0 0, L_0x5603735155a0;  1 drivers
-v0x5603735139e0_0 .net *"_s4", 0 0, L_0x5603735145f0;  1 drivers
-v0x560373513ac0_0 .net *"_s40", 0 0, L_0x560373515500;  1 drivers
-v0x560373513ba0_0 .net *"_s6", 0 0, L_0x560373514700;  1 drivers
-v0x560373513c80_0 .net *"_s8", 0 0, L_0x560373514810;  1 drivers
-v0x560373513d60_0 .net "x", 0 0, v0x5603735141d0_0;  1 drivers
-v0x560373513e20_0 .net "y", 0 0, v0x5603735142d0_0;  1 drivers
-v0x560373513ee0_0 .net "z", 0 0, v0x5603735143a0_0;  1 drivers
-    .scope S_0x5603734ef1a0;
+L_0x5556144cf760 .functor NOT 1, v0x5556144cf590_0, C4<0>, C4<0>, C4<0>;
+L_0x5556144cf800 .functor AND 1, L_0x5556144cf760, v0x5556144cf690_0, C4<1>, C4<1>;
+L_0x5556144cf910 .functor NOT 1, v0x5556144cf690_0, C4<0>, C4<0>, C4<0>;
+L_0x5556144cf980 .functor AND 1, v0x5556144cf590_0, L_0x5556144cf910, C4<1>, C4<1>;
+L_0x5556144cfa40 .functor OR 1, L_0x5556144cf800, L_0x5556144cf980, C4<0>, C4<0>;
+L_0x5556144cfba0 .functor NOT 1, v0x5556144cf590_0, C4<0>, C4<0>, C4<0>;
+L_0x5556144cfce0 .functor AND 1, L_0x5556144cfba0, v0x5556144cf690_0, C4<1>, C4<1>;
+v0x5556144a99a0_0 .net "B", 0 0, L_0x5556144cfce0;  alias, 1 drivers
+v0x5556144cebf0_0 .net "D", 0 0, L_0x5556144cfa40;  alias, 1 drivers
+v0x5556144cecb0_0 .net *"_s0", 0 0, L_0x5556144cf760;  1 drivers
+v0x5556144ceda0_0 .net *"_s10", 0 0, L_0x5556144cfba0;  1 drivers
+v0x5556144cee80_0 .net *"_s2", 0 0, L_0x5556144cf800;  1 drivers
+v0x5556144cefb0_0 .net *"_s4", 0 0, L_0x5556144cf910;  1 drivers
+v0x5556144cf090_0 .net *"_s6", 0 0, L_0x5556144cf980;  1 drivers
+v0x5556144cf170_0 .net "x", 0 0, v0x5556144cf590_0;  1 drivers
+v0x5556144cf230_0 .net "y", 0 0, v0x5556144cf690_0;  1 drivers
+    .scope S_0x5556144ada60;
 T_0 ;
-    %vpi_call 2 15 "$monitor", "x=%d,y=%d,z=%d,S=%d,C=%d", v0x5603735141d0_0, v0x5603735142d0_0, v0x5603735143a0_0, v0x560373514100_0, v0x560373514040_0 {0 0 0};
+    %vpi_call 2 15 "$monitor", "x=%d,y=%d,D=%d,B=%d", v0x5556144cf590_0, v0x5556144cf690_0, v0x5556144cf4c0_0, v0x5556144cf400_0 {0 0 0};
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x5603735141d0_0, 0, 1;
+    %store/vec4 v0x5556144cf590_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x5603735142d0_0, 0, 1;
-    %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x5603735143a0_0, 0, 1;
+    %store/vec4 v0x5556144cf690_0, 0, 1;
     %delay 10, 0;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x5603735141d0_0, 0, 1;
-    %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x5603735142d0_0, 0, 1;
+    %store/vec4 v0x5556144cf590_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5603735143a0_0, 0, 1;
-    %delay 10, 0;
-    %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x5603735141d0_0, 0, 1;
-    %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5603735142d0_0, 0, 1;
-    %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x5603735143a0_0, 0, 1;
-    %delay 10, 0;
-    %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x5603735141d0_0, 0, 1;
-    %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5603735142d0_0, 0, 1;
-    %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5603735143a0_0, 0, 1;
+    %store/vec4 v0x5556144cf690_0, 0, 1;
     %delay 10, 0;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5603735141d0_0, 0, 1;
+    %store/vec4 v0x5556144cf590_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x5603735142d0_0, 0, 1;
-    %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x5603735143a0_0, 0, 1;
+    %store/vec4 v0x5556144cf690_0, 0, 1;
     %delay 10, 0;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5603735141d0_0, 0, 1;
-    %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x5603735142d0_0, 0, 1;
+    %store/vec4 v0x5556144cf590_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5603735143a0_0, 0, 1;
-    %delay 10, 0;
-    %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5603735141d0_0, 0, 1;
-    %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5603735142d0_0, 0, 1;
-    %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x5603735143a0_0, 0, 1;
-    %delay 10, 0;
-    %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5603735141d0_0, 0, 1;
-    %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5603735142d0_0, 0, 1;
-    %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5603735143a0_0, 0, 1;
+    %store/vec4 v0x5556144cf690_0, 0, 1;
     %end;
     .thread T_0;
 # The file index is used to find the file name in the following table.
 :file_names 3;
     "N/A";
     "<interactive>";
-    "full_add.v";
+    "half_subt.v";
